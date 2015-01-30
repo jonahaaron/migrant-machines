@@ -7,21 +7,30 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
+<!-- Smooth Scroll -->
+<script>
+function smoothScroll(section) {
+  $('html, body').animate({
+    scrollTop: $('.content-section-' + section + ':first').offset().top - 51
+  }, 1000);
+}
+</script>
+
 <!-- Setup Modal Trigger -->
 <script>
-  $('[href="#contact"]').click(function() {
-    $('#contactModal').modal('show');
-  });
+$('[href="#contact"]').click(function() {
+  $('#contactModal').modal('show');
+});
 </script>
   
 <!-- Validate -->
 <script>
-  $('#contact-form').validate({
-    submitHandler: function(form) {
-      event.preventDefault();
-      $.post($(form).attr('action'), $(form).serialize());
-      $('#contactModal').modal('hide');
-      $('#formSuccess').slideDown();
-    }
-  });
+$('#contact-form').validate({
+  submitHandler: function(form) {
+    event.preventDefault();
+    $.post($(form).attr('action'), $(form).serialize());
+    $('#contactModal').modal('hide');
+    $('#formSuccess').slideDown();
+  }
+});
 </script>
