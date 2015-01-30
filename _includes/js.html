@@ -3,3 +3,21 @@
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Setup Modal Trigger -->
+<script>
+$('[href="#contact"]').click(function() {
+  $('#myModal').modal();
+});
+</script>
+
+<!-- Post Form to Wufoo -->
+<script>
+  $('#contact-form').submit(function( event ) {
+    // Stop form from submitting normally
+    event.preventDefault();
+    
+    // Post to Wufoo
+    $.post($(this).attr('action'), $(this).serialize() );
+  });
+</script>
