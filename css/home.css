@@ -1,0 +1,12 @@
+.intro-social-buttons li:first-child a {
+  background: rgb(51, 152, 213);
+  color: #fff;
+}
+
+.fa-contact {
+  color: #fff;
+}
+
+.fa-contact:before {
+  content: "\f0e0";
+}
