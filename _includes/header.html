@@ -9,16 +9,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{ site.title }}</a>
+            <a class="navbar-brand" href="#top" onclick="smoothScroll(false, '#top'); return false;">{{ site.title }}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#" onclick="smoothScroll('a'); return false;">About</a>
+                    <a href="#about" onclick="smoothScroll('a', '#about'); return false;">About</a>
                 </li>
                 <li>
-                    <a href="#" onclick="smoothScroll('b'); return false;">Services</a>
+                    <a href="#services" onclick="smoothScroll('b', '#services'); return false;">Services</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>

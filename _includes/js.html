@@ -11,13 +11,15 @@
 <script>
 var $scrollTo;
 
-function smoothScroll(section) {
+function smoothScroll(section, hash) {
   if (section) $scrollTo = $('.content-section-' + section + ':first');
   else $scrollTo = $('.intro-header');
   
   $('html, body').animate({
     scrollTop: $scrollTo.offset().top - 51
   }, 1000);
+  
+  document.location.hash = hash;
 }
 </script>
 
