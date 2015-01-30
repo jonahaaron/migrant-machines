@@ -1,4 +1,4 @@
-.intro-social-buttons li:first-child a {
+.intro-social-buttons li:first-child a, .banner-social-buttons li:first-child a {
   background: rgb(51, 152, 213);
   color: #fff;
 }
