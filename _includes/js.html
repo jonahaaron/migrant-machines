@@ -1,23 +1,27 @@
 <!-- jQuery Version 1.11.0 -->
 <script src="js/jquery-1.11.0.js"></script>
 
+<!-- jQuery Validate -->
+<script src="js/jquery.validate.min.js"></script>
+
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
 <!-- Setup Modal Trigger -->
 <script>
-$('[href="#contact"]').click(function() {
-  $('#contactModal').modal();
-});
+  $('[href="#contact"]').click(function() {
+    $('#contactModal').modal('show');
+  });
 </script>
-
-<!-- Post Form to Wufoo -->
+  
+<!-- Validate -->
 <script>
-  $('#contact-form').submit(function( event ) {
-    // Stop form from submitting normally
-    event.preventDefault();
-    
-    // Post to Wufoo
-    $.post($(this).attr('action'), $(this).serialize() );
+  $('#contact-form').validate({
+    submitHandler: function(form) {
+      event.preventDefault();
+      $.post($(form).attr('action'), $(form).serialize());
+      $('#contactModal').modal('hide');
+      $('#formSuccess').slideDown();
+    }
   });
 </script>
